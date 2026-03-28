@@ -10,8 +10,6 @@ def run_tests(context="local"):
         return "./breeze testing pytest tests/"
     else:
         return "Unknown context"
-
-
 def run_static_checks(context="local"):
     """
     Returns the command to run static checks.
