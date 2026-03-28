@@ -1,22 +1,21 @@
-# skills.py
 
-def run_tests(context="local"):
-    """
-    Returns the command to run tests based on execution context.
-    """
-    if context == "local":
-        return "pytest tests/"
-    elif context == "breeze":
-        return "./breeze testing pytest tests/"
-    else:
-        return "Unknown context"
-def run_static_checks(context="local"):
-    """
-    Returns the command to run static checks.
-    """
-    if context == "local":
-        return "pre-commit run --all-files"
-    elif context == "breeze":
-        return "./breeze static-checks"
-    else:
-        return "Unknown context"
+SKILLS = {
+    "run_tests": {
+        "local": "pytest tests/",
+        "breeze": "./breeze testing pytest tests/"
+    },
+    "static_checks": {
+        "local": "pre-commit run --all-files",
+        "breeze": "./breeze static-checks"
+    }
+}
+
+
+def run_skill(skill_name, context):
+    if skill_name not in SKILLS:
+        return "Skill not found"
+    
+    if context not in SKILLS[skill_name]:  # error
+        return "Invalid context"
+
+    return SKILLS[skill_name][context]

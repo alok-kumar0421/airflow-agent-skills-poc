@@ -1,5 +1,8 @@
 # Airflow Agent Skills PoC
 
+## 🔗 PoC Repository
+https://github.com/alok-kumar0421/airflow-agent-skills-poc
+
 This is a small Proof of Concept (PoC) built for the **Airflow Contribution & Verification Agent Skills** GSoC project.
 
 ## What this PoC does
@@ -23,6 +26,8 @@ In Airflow, contributors often switch between local setups and Breeze. This PoC 
   - `local`
   - `breeze`
 - Simple simulation of how an agent would use these skills
+- Designed using a structured skill mapping (extensible for future workflows)
+- Easily adaptable to additional contributor tasks beyond tests and checks
 
 ## How it works
 
@@ -34,3 +39,8 @@ In Airflow, contributors often switch between local setups and Breeze. This PoC 
 ```bash
 python main.py
 ```
+## Future Scope
+
+- Add more contributor workflows (e.g., DAG validation, integration tests)
+- Integrate dynamic command extraction from Breeze CLI
+- Extend to automated execution instead of simulation
