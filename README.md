@@ -43,4 +43,4 @@ python main.py
 
 - Add more contributor workflows (e.g., DAG validation, integration tests)
 - Integrate dynamic command extraction from Breeze CLI
-- Extend to automated execution instead of simulation
+- Extend to automated execution instead of simulations
